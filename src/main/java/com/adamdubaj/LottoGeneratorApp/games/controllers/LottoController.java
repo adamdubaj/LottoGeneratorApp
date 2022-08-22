@@ -6,6 +6,9 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.io.IOException;
 import java.time.LocalDate;
@@ -14,8 +17,14 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+@Controller
 public class LottoController implements Gameable {
 
+    @GetMapping("/test")
+    @ResponseBody
+    public String test(){
+        return "Hello World";
+    }
     public List<Lotto> scrap(String url, int timeOut){
         Document document = null;
         List<Lotto> result = new ArrayList<>();

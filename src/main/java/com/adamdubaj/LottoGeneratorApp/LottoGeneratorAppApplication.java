@@ -14,7 +14,7 @@ import java.util.List;
 public class LottoGeneratorAppApplication {
 
 	public static void main(String[] args) {
-		//SpringApplication.run(LottoGeneratorAppApplication.class, args);
+		SpringApplication.run(LottoGeneratorAppApplication.class, args);
 		System.out.println("Hello world!");
 		String url = "https://megalotto.pl/wyniki/lotto/losowania-od-2-Sierpnia-2022-do-18-Sierpnia-2022";
 		LottoController lottoController = new LottoController();
@@ -24,5 +24,4 @@ public class LottoGeneratorAppApplication {
 			System.out.println(lotto);
 		}
 	}
-
 }
