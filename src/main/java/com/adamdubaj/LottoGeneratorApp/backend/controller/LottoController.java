@@ -1,7 +1,7 @@
-package com.adamdubaj.LottoGeneratorApp.games.controllers;
+package com.adamdubaj.LottoGeneratorApp.backend.controller;
 
-import com.adamdubaj.LottoGeneratorApp.games.Gameable;
-import com.adamdubaj.LottoGeneratorApp.games.Lotto;
+import com.adamdubaj.LottoGeneratorApp.backend.Gameable;
+import com.adamdubaj.LottoGeneratorApp.backend.model.Lotto;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -43,7 +43,11 @@ public class LottoController implements Gameable {
                 tempList.add(Integer.valueOf(e.select("li").get(5).text()));
                 tempList.add(Integer.valueOf(e.select("li").get(6).text()));
                 tempList.add(Integer.valueOf(e.select("li").get(7).text()));
-                result.add(new Lotto(id, tempList, localDate));
+                result.add(
+                        new Lotto(id,
+                        tempList.get(0),tempList.get(1),tempList.get(2), tempList.get(3), tempList.get(4), tempList.get(5),
+                        localDate)
+                );
             }
 
         } catch (IOException e){

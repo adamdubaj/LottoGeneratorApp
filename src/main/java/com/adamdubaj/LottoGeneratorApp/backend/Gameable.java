@@ -1,4 +1,4 @@
-package com.adamdubaj.LottoGeneratorApp.games;
+package com.adamdubaj.LottoGeneratorApp.backend;
 
 import java.time.LocalDate;
 import java.util.List;

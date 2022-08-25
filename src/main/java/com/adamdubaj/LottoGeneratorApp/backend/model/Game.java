@@ -1,9 +1,10 @@
-package com.adamdubaj.LottoGeneratorApp.games;
+package com.adamdubaj.LottoGeneratorApp.backend.model;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 
+import javax.persistence.Id;
 import java.time.LocalDate;
 import java.util.List;
 
@@ -11,6 +12,7 @@ import java.util.List;
 @Getter
 @Setter
 public abstract class Game {
+    @Id
     private final int id;
     private final List<Integer> numbers;
     private final LocalDate localDate;

@@ -1,13 +1,10 @@
 package com.adamdubaj.LottoGeneratorApp;
 
-import com.adamdubaj.LottoGeneratorApp.games.Lotto;
-import com.adamdubaj.LottoGeneratorApp.games.controllers.LottoController;
+import com.adamdubaj.LottoGeneratorApp.backend.model.Lotto;
+import com.adamdubaj.LottoGeneratorApp.backend.controller.LottoController;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import java.lang.reflect.Array;
-import java.time.LocalDate;
-import java.util.ArrayList;
 import java.util.List;
 
 @SpringBootApplication
